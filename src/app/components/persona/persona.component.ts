@@ -7,7 +7,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonaComponent implements OnInit {
 
-  constructor() { }
+
+  nombre="Joaquín";
+  apellido="Vera Ortega";
+  acercaDe="desarrollador etc etc";
+
+  constructor() {
+   }
 
   ngOnInit(): void {
   }
