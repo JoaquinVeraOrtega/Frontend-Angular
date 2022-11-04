@@ -7,6 +7,7 @@ import { ImgBackgroundComponent } from './components/img-background/img-backgrou
 import { PersonaComponent } from './components/persona/persona.component';
 import { SkillsComponent } from './components/skills/skills.component';
 import { ProyectosComponent } from './components/proyectos/proyectos.component';
+import { EducacionComponent } from './components/educacion/educacion.component';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { ProyectosComponent } from './components/proyectos/proyectos.component';
     PersonaComponent,
     SkillsComponent,
     ProyectosComponent,
+    EducacionComponent,
   ],
   imports: [
     BrowserModule
