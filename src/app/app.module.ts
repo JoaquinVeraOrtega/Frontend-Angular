@@ -6,6 +6,7 @@ import { BarraDeNavegacionComponent } from './components/barra-de-navegacion/bar
 import { ImgBackgroundComponent } from './components/img-background/img-background.component';
 import { PersonaComponent } from './components/persona/persona.component';
 import { SkillsComponent } from './components/skills/skills.component';
+import { ProyectosComponent } from './components/proyectos/proyectos.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { SkillsComponent } from './components/skills/skills.component';
     BarraDeNavegacionComponent,
     ImgBackgroundComponent,
     PersonaComponent,
-    SkillsComponent
+    SkillsComponent,
+    ProyectosComponent,
   ],
   imports: [
     BrowserModule
