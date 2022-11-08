@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { BarraDeNavegacionComponent } from './components/barra-de-navegacion/barra-de-navegacion.component';
@@ -32,7 +33,8 @@ import { ItemExperienciaComponent } from './components/items/item-experiencia/it
     ItemExperienciaComponent,
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

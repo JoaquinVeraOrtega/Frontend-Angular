@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-persona',
@@ -8,9 +9,23 @@ import { Component, OnInit } from '@angular/core';
 export class PersonaComponent implements OnInit {
 
 
-  nombre="Joaquín";
-  apellido="Vera Ortega";
+  nombreCompleto="Joaquín Vera Ortega";
   acercaDe="desarrollador etc etc";
+
+  nuevoNombre:string="";
+
+  nuevoAcercaDe:string="";
+
+  cambiarNombre(){
+
+this.nombreCompleto = this.nuevoNombre;
+
+  }
+
+  cambiarAcercaDe(){
+
+    this.acercaDe = this.nuevoAcercaDe;
+  }
 
   constructor() {
    }
