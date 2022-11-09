@@ -1,5 +1,19 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
+<form>
+
+<input type="text" name="nombre" id="nombre" [(ngModel)]="nombre">
+
+<input type="text" name="cliente" id="cliente" [(ngModel)]="cliente">
+
+
+<button type="submit" (click)="agregarProyecto()">asdadf</button>
+
+</form> 
+
+<ul *ngFor="let proyecto of proyectos">
+  <li>
+      <h3>{{proyecto.nombre}}
+      </h3>
+      <p>{{proyecto.cliente}}</p>
+    </li>
+    
+</ul>
