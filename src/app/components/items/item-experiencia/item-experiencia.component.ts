@@ -18,6 +18,11 @@ export class ItemExperienciaComponent implements OnInit {
       let miExperiencia = new Experiencia(this.nuevaEmpresa, this.nuevoPuesto);
       this.experiencias.push(miExperiencia);
     }
+
+    eliminarExperiencia(elemento:number){
+  
+      this.experiencias.splice(elemento, 1);
+    }
     
     nuevaEmpresa:string = "";
     nuevoPuesto:string = "";

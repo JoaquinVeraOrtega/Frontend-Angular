@@ -24,7 +24,10 @@ export class ItemEdcucacionComponent implements OnInit {
     nuevoEgresoYear:string = "";
 
 
-
+eliminarEducacion(elemento:number){
+  
+  this.educacion.splice(elemento, 1);
+}
 
 
   

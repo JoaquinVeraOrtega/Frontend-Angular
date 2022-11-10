@@ -1,11 +1,14 @@
 
 
 
-<ul *ngFor="let Proyecto of proyectos">
+<ul *ngFor="let Proyecto of proyectos; let i=index">
   <li class="listaProyectos">
       <h3>{{Proyecto.Nombre}}
       </h3>
       <p>{{Proyecto.Cliente}}</p>
+
+      <button type="button" (click)="eliminarProyecto(i)">delete</button>
+
     </li>
     
 </ul>

@@ -1,8 +1,11 @@
-<ul *ngFor="let Experiencia of experiencias">
+<ul *ngFor="let Experiencia of experiencias; let i=index">
   <li class="listaProyectos">
       <h3>{{Experiencia.Empresa}}
       </h3>
       <p>{{Experiencia.Puesto}}</p>
+
+      <button type="button" (click)="eliminarExperiencia(i)">delete</button>
+
     </li>
     
 </ul>

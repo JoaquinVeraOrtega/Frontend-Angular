@@ -20,6 +20,11 @@ export class SkillComponent implements OnInit {
       let mySkill = new Skill(this.nuevaSkill, this.nuevoPorcentaje);
       this.skills.push(mySkill);
     }
+
+    eliminarSkill(elemento:number){
+  
+      this.skills.splice(elemento, 1);
+    }
     
     nuevaSkill:string = "";
     nuevoPorcentaje:number=0;

@@ -22,6 +22,11 @@ agregarProyecto(){
   this.proyectos.push(miProyecto);
 }
 
+eliminarProyecto(elemento:number){
+  
+  this.proyectos.splice(elemento, 1);
+}
+
 nuevoNombre:string = "";
 nuevoCliente:string = "";
 

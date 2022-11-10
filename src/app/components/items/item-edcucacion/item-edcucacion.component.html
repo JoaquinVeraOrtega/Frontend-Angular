@@ -1,10 +1,11 @@
 
-<ul *ngFor="let Educacion of educacion">
+<ul *ngFor="let Educacion of educacion; let i=index">
   <li>
       <h3>{{Educacion.Titulo}}
       </h3>
       <h6>{{Educacion.Institucion}}</h6> <p>{{Educacion.EgresoYear}}</p>
-      
+
+      <button type="button" (click)="eliminarEducacion(i)">delete</button>
 
     </li>
     
