@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Proyecto } from 'src/app/proyectos';
+import { Proyecto } from 'src/app/models/proyectos.model';
 
 @Component({
   selector: 'app-item-proyecto',
@@ -10,30 +10,21 @@ import { Proyecto } from 'src/app/proyectos';
 
 export class ItemProyectoComponent implements OnInit {
 
-nombre="";
- cliente="";
- 
- proyectos: any=[];
+
+proyectos:Proyecto[]=[
+
+new Proyecto("Portfolio", "Arg Progra"),
+
+]
 
 agregarProyecto(){
-
-  this.proyectos.push(this.nombre, this.cliente);
-
-  console.log("funca")
+  let miProyecto = new Proyecto(this.nuevoNombre, this.nuevoCliente);
+  this.proyectos.push(miProyecto);
 }
 
+nuevoNombre:string = "";
+nuevoCliente:string = "";
 
-
-
- constructor() {
- this.proyectos=[
-  {nombre:"portfolio", cliente:"arg progra"},
-{nombre:"cielo", cliente:"euge"}
- ]
-
-
-
-}
 
   ngOnInit(): void {
   }

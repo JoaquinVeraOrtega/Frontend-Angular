@@ -2,10 +2,15 @@ export class Proyecto {
     private nombre:string = "";
     private cliente:string = "";
 
- 
+ constructor(nombre:string, cliente:string){
+
+    this.nombre = nombre;
+    this.cliente = cliente;
+    
+ }
 
     public get Nombre():string {
-return this.nombre;
+        return this.nombre;
     }
 
     public set Nombre(value:string){
