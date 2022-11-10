@@ -1,15 +1,13 @@
 export class Educacion {
     private titulo:string = "";
     private institucion:string = "";
-    private fechaIngreso:Date;
-    private fehcaEgreso:Date; 
+    private yearEgreso:string = "";
 
- constructor(titulo:string, institucion:string, fechaIngreso:Date, fechaEgreso:Date){
+ constructor(titulo:string, institucion:string, yearEgreso:string){
 
     this.titulo = titulo;
     this.institucion = institucion;
-    this.fechaIngreso = fechaIngreso;
-    this.fehcaEgreso = fechaEgreso
+    this.yearEgreso = yearEgreso;
     
  }
 
@@ -29,19 +27,13 @@ export class Educacion {
          this.institucion = value;
     }
 
-    public get FechaDeIngreso():Date {
-        return this.fechaIngreso;
+    public get EgresoYear():string {
+        return this.yearEgreso;
      }
  
-     public set FechaDeIngreso(value:Date){
-         this.fechaIngreso = value;
+     public set EgresoYear(value:string){
+         this.yearEgreso = value;
      }
 
-     public get FechaDeEgreso():Date {
-        return this.fehcaEgreso;
-     }
- 
-     public set FechaDeEgreso(value:Date){
-         this.fehcaEgreso = value;
-     } 
+   
 }

@@ -1,5 +1,50 @@
-<ul class="list-group list-group-flush">
-    <li class="list-group-item">An item</li>
-    <li class="list-group-item">A second item</li>
-    <li class="list-group-item">A third item</li>
-  </ul>
+
+<ul *ngFor="let Educacion of educacion">
+  <li>
+      <h3>{{Educacion.Titulo}}
+      </h3>
+      <h6>{{Educacion.Institucion}}</h6> <p>{{Educacion.EgresoYear}}</p>
+      
+
+    </li>
+    
+</ul>
+
+
+
+<!-- Button trigger modal -->
+<button type="button"  class="btn btn-light" data-bs-toggle="modal" data-bs-target="#ModalEducacion">
+  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-plus-circle" viewBox="0 0 16 16">
+    <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+    <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+  </svg>
+</button>
+
+
+<!-- Modal -->
+<div class="modal fade" id="ModalEducacion" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Agregar Nuevo Título</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <form>
+
+          <input type="text" name="titulo" id="titulo" placeholder="Título" [(ngModel)]="nuevoTitulo">
+          <br>
+          <input type="text" name="institucion" id="institucion" placeholder="Institucion" [(ngModel)]="nuevaInstitucion">          
+          <br>
+          <input type="text" name="egreso" id="egreso" placeholder="Año de Egreso" [(ngModel)]="nuevoEgresoYear">          
+
+          
+        </form> 
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cancelar</button>
+        <button type="button" class="btn btn-primary" data-bs-dismiss="modal" (click)="agregarEducacion()">Agregar</button>
+      </div>
+    </div>
+  </div>
+</div>
