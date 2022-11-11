@@ -1,15 +1,16 @@
 <p class="card-text">{{tituloSkill}}</p>
 
-<!--me guardo como se hace la barra-->
-<div class="progress">
-    <div class="progress-bar" role="progressbar" style="width: 54%;" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100">54%</div>
-</div>
+
 
 <ul *ngFor="let Skill of skills; let i=index">
     <li class="listaProyectos">
         <h3>{{Skill.Tecnologia}}
         </h3>
-        <p>{{Skill.Porcentaje}}</p>
+        
+        <!--me guardo como se hace la barra-->
+<div class="progress">
+  <div class="progress-bar" role="progressbar" style="width: {{Skill.Porcentaje}}%" aria-valuenow="54" aria-valuemin="0" aria-valuemax="100">{{Skill.Porcentaje}}%</div>
+</div>
 
         <button type="button" (click)="eliminarSkill(i)">delete</button>
 
